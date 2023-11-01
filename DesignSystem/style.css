@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+}
+
+/* Header */
+
+h1 {
+    font-size: 2.7em;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: auto;
+}
+header p {
+    text-align: center;
+    font-size: 1.9em;
+    width: 50%;
+    margin: auto;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 40px 0;
+    text-align: center;
+}
+nav > ul > li {
+    display: inline-block;
+}
+nav > ul > li > a {
+    padding: 0 15px;
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+nav > ul > li > a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Main */
+
+section {
+    margin: 40px 40px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+h2 {
+    margin-left: 40px;
+}
+
+/* Colors */
+
+.color-container {
+    text-align: center;
+}
+.color-panel {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    margin: 20px 20px;
+    padding: 8px 0;
+}
+.blue {
+    background-color: #08073F;
+    color: white;
+    border-radius: 8px;
+}
+.orange {
+    background-color: #EF8354;
+    color: white;
+    border-radius: 8px;
+}
+.white {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+.grey {
+    background-color: #5a5a5a;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Fonts */
+
+.fonts-panel {
+    display: inline-block;
+    width: auto;
+    margin: 20px 40px;
+}
+.font-label {
+    font-size: 1.3em;
+    text-decoration: underline;
+} 
+.default {
+    font-weight: 300;
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+
+/* Text Styles */
+
+.text-styles-panel {
+    display: inline-block;
+    width: auto;
+    margin: 20px 40px;
+}
+.h1 {
+    font-size: 31px;
+    font-weight: 800;
+}
+.h2 {
+    font-size: 27px;
+    font-weight: 800;
+}
+.h3 {
+    font-size: 21px;
+    font-weight: 600;
+}
+.p {
+    font-size: 15px;
+    font-weight: 300;
+}
+.a {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+/* Footer */
+
+footer {
+    margin: 40px;
+    text-align: right;
+}
