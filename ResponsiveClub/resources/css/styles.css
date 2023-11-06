@@ -1,0 +1,77 @@
+/* Universal Styles */
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #00040d;
+    background-color: #F5F5F5;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;;
+    font-size: 1.5rem;
+
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+p {
+    max-width: 800px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    background-color: white;
+}
+
+header section .container .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+}
+
+header .logo {
+    width: 200px;
+}
+  
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+  
+nav li {
+    padding-left: 3.5rem;
+}
+
+nav a {
+    vertical-align: bottom;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #00040d;
+    font-weight: 600;
+    text-transform: lowercase;
+}
