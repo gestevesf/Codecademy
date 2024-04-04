@@ -1,0 +1,415 @@
+/* CSS Variables */
+:root {
+    --normal-font: 400;
+    --bold-font: 600;
+    --bolder-font: 900;
+    --primary-color: #0A192F;
+    --secondary-color: #2196F3;
+    --line-height: 1.7rem;
+    --transition: 0.3s ease-in;
+}
+
+
+
+/* Smooth scroll effect */
+html {
+    scroll-behavior: smooth;
+}
+  
+
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: var(--transition);
+}
+
+body {
+    font-family: "Source Code Pro", monospace;
+    font-size: 18px;
+    color: #0A192F;
+}
+
+ul li {
+    list-style-type: none;
+}
+  
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+  
+a:hover {
+    color: var(--secondary-color);
+    font-weight: 600;
+} 
+
+
+
+/* Headings */
+h1, h2, h4 {
+    font-family: "Exo", sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.815rem;
+    font-weight: 700;
+    margin: .5rem 0;
+}
+
+h2 {
+    font-size: 3.052rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.953rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.7rem 0 0.7rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.8rem;
+}
+
+
+
+/* Button */
+.btn {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border: 2px solid #2196F3;
+    width: auto;
+    margin-top: 40px;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #2196F3;
+    border: 2px solid white;
+}
+
+.b2 {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white ;
+}
+
+.b3 {
+    background-color: transparent;
+    color: #2196F3;
+}
+
+.b3:hover {
+    background-color: #2196F3;
+    border: 2px solid #2196F3;
+    color: white;
+}
+
+
+
+/* Nav Bar */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 5.5rem;
+}
+
+nav a {
+    color: white;
+    text-transform: uppercase;
+}
+
+.hamburger {
+    display: none;
+}
+
+.logo-white {
+    width: 80px;
+}
+
+.logo-blue {
+    width: 80px;
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.nav-item {
+    margin-left: 2.5rem;
+    font-weight: 400;
+}
+
+/* NAV-FIXED JS */
+#nav-fixed {
+    background: linear-gradient(to right, white 50%, #0A192F 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .4s ease-out;
+}
+
+#nav-fixed.scrolled {
+    box-shadow: 0 4px 4px 1px rgba(54, 53, 63, 0.3);
+    background-position: left bottom;
+}
+
+#nav-fixed.scrolled a {
+    color: #0A192F;
+}
+
+#nav-fixed.scrolled a:hover {
+    color: #2196F3;
+}
+
+#nav-fixed.scrolled .logo-white {
+    display: none;
+}
+
+#nav-fixed.scrolled .logo-blue {
+    display: block;
+}
+
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -80px;
+
+    background-image: url(../img/background-fold@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+}
+
+.intro-text {
+    color: white;
+    margin-left: 5.5rem;
+}
+
+
+
+/* About Section */
+#about {
+    margin-top: 125px;
+    padding: 0 5.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about h2 {
+    color: #2196F3;
+    margin-bottom: 50px;
+}
+
+.about-text {
+    max-width: 800px;
+}
+
+
+
+/* Experience Section */
+#experience {
+    margin-top: 125px;
+    padding: 0 5.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#experience h2 {
+    color: #2196F3;
+    margin-bottom: 50px;
+}
+
+#experience h4 {
+    padding: 1.5rem 0 1.5rem 1rem;
+    margin: 0;
+}
+
+#experience .row {
+    display: flex;
+    max-width: 800px;
+}
+
+#experience .left {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100%;
+    margin-right: 50px;
+    border-left: 2px solid #2196F3;
+    position: relative;
+}
+
+#experience .left .bottom1 {
+    border-bottom: 2px solid #2196F3;
+    color: #2196F3;
+    font-weight: 700;
+}
+
+/* Experiment */
+/*#experience .left::before {
+    transition: all 0.2s ease 0s;
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0.2rem;
+    height: 100%;
+    background: linear-gradient(rgb(239, 65, 45), rgb(79, 41, 32));
+    z-index: 100;
+}*/
+
+#experience ul {
+    padding-left: 2.5rem;
+}
+
+#experience ul li {
+    list-style-type: disc;
+    line-height: 2rem;
+    padding-left: 1.5rem;
+}
+
+
+
+/* Work Section */
+#work {
+    margin-top: 125px;
+    display: flex;
+    flex-direction: column;
+}
+
+#work h2 {
+    color: #2196F3;
+    margin-bottom: 50px;
+    padding: 0 5.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#work h3 {
+    font-family: "Exo", sans-serif;
+    color: #2196F3;
+    text-transform: uppercase;
+    font-size: 2.441rem;
+    font-weight: 700;
+    padding-bottom: 1.7rem;
+}
+
+#work p {
+    padding-bottom: 1.7rem;
+}
+
+#work ul {
+padding-left: 2.5rem;
+margin-bottom: 1.7rem;
+}
+
+#work ul li {
+    list-style-type: disc;
+    line-height: 2rem;
+    padding-left: 1.5rem;
+}
+
+.project-inner {
+    padding: 75px 5.5rem;
+}
+
+.project1 {
+    background-image: url(../img/project-1@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    height: auto;
+}
+
+.project2 {
+    background-image: url(../img/project-2@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.project3 {
+    background-image: url(../img/project-1@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+footer {
+    background-color: #0A192F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 8px solid #2196F3;
+}
+
+footer p {
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+#contact {
+    display: flex;
+    padding: 100px 0;
+    gap: 150px;
+    max-width: 800px;
+}
+
+/*#contact ul {
+    padding-left: 2.5rem;
+    margin-bottom: 1.7rem;
+}*/
+    
+#contact ul li {
+    list-style-type: disc;
+    line-height: 2.5rem;
+    padding-left: 1.5rem;
+}
+
+#contact a {
+    color: white;
+}
+
+#contact a:hover {
+    color: #2196F3;
+    font-weight: 600;
+} 
