@@ -1,0 +1,165 @@
+/* Universal Styles */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #D5DDE0;
+    background-color: #00040d;
+    margin: auto 60px;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+p {
+    max-width: 800px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+}
+
+header section .container .row {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    justify-content: space-between
+}
+  
+header .logo {
+    width: 100px;
+}
+  
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+  
+nav li {
+    padding-left: 3.5rem;
+}
+
+nav a {
+    vertical-align: bottom;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #D5DDE0;
+    font-weight: 600;
+}
+
+/* Main */
+
+#cover {
+    display: flex;
+    height: 600px;
+    background-image: url('../images/cover.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+}
+
+#mission h2 {
+    margin-bottom: 0;
+}
+
+#expectations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    background-color: #D5DDE0;
+    color: #00040d;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.service {
+    padding-left: 15px;
+    width: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.service img {
+    width: 300px;
+    height: 200px;
+}
+
+#team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.personel {
+    padding-left: 15px;
+    width: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.personel img {
+    height: 400px;
+    max-width: 275px;
+}
+
+/* Footer */
+
+footer {
+    padding: 20px 0;
+    background-color: #D5DDE0;
+    color: #00040d;
+    text-align: center;
+}
+
+footer p {
+    max-width: none;
+    font-size: smaller;
+}
