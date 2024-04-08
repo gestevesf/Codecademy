@@ -14,17 +14,25 @@
 <body>
     <header>
         <nav id="nav-fixed">
-            <a href="#index.html" class="logo">
+            <a href="index.html" class="logo">
                 <img class="logo-white" src="img/gf-logo-white@2x.png" alt="logo">
                 <img class="logo-blue" src="img/gf-logo-blue@2x.png" alt="logo">
             </a>
-             <ul>
-                <li class="nav-item"><a href="#about" class="nav-link" id="nav-link">about</a></li>
-                <li class="nav-item"><a href="#experience" class="nav-link" id="nav-link">experience</a></li>
-                <li class="nav-item"><a href="#work" class="nav-link" id="nav-link">work</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link" id="nav-link">contact</a></li>
+             <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" id="nav-link">about</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link" id="nav-link">experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#work" class="nav-link" id="nav-link">work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" id="nav-link">contact</a>
+                </li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -59,22 +67,61 @@
 
         <section id="experience" class="container">
             <h2>Experience</h2>
-            <div class="row">
-                <div class="column left">
-                    <h4 class="bottom1">Project 1</h4>
-                    <h4 class="bottom2">Project 2</h4>
-                    <h4 class="bottom3">Project 3</h4>
-                    <h4 class="bottom4">Project 4</h4>
-                </div>
-                <div class="column right">
-                    <p>February 2016 - July 2018</p>
-                    <p>Sens.ai was a social media companion hybrid application. I worked on various parts of the business:</p>
+            <div class="wrapper">
+                <div class="wrapper_left">
                     <ul>
-                        <li>Worked on numerous features of React/Redux hybrid app. The app consumed APIs written in Go, and was containerized with Docker. App was shipped to Apple/Android marketplaces with Cordova</li>
-                        <li>Worked on rebuilding the frontend of our internal Ruby on Rails app by integrating React/Redux</li>
-                        <li>Developed Wordpress websites using my own custom Underscores/SCSS/Gulp/Parcel starter theme</li>
-                        <li>Created application mockups & wireframes using Sketch</li>
+                        <li data-li="experience1" class="active">
+                            <h4>Experience 1</h4>
+                        </li>
+                        <li data-li="experience2">
+                            <h4>Experience 2</h4>
+                        </li>
+                        <li data-li="experience3">
+                            <h4>Experience 3</h4>
+                        </li>
+                        <li data-li="experience4">
+                            <h4>Experience 4</h4>
+                        </li>
                     </ul>
+                </div>
+
+                <div class="wrapper_right">
+                    <div class="container">
+                        <div class="item experience1">
+                            <p>February 2016 - July 2018</p>
+                            <p>Sens.ai was a social media companion hybrid application. I worked on various parts of the business:</p>
+                            <ul>
+                                <li>Worked on numerous features of React/Redux hybrid app. The app consumed APIs written in Go, and was containerized with Docker. App was shipped to Apple/Android marketplaces with Cordova</li>
+                                <li>Worked on rebuilding the frontend of our internal Ruby on Rails app by integrating React/Redux</li>
+                                <li>Developed Wordpress websites using my own custom Underscores/SCSS/Gulp/Parcel starter theme</li>
+                                <li>Created application mockups & wireframes using Sketch</li>
+                            </ul>
+                        </div>
+                        <div class="item experience2" style="display: none;">
+                            <p>August 2018 - December 2020</p>
+                            <p>sneaker.ai was a social media companion hybrid application. I worked on various parts of the business:</p>
+                            <ul>
+                                <li>Worked on numerous features of React/Redux hybrid app. The app consumed APIs written in Go, and was containerized with Docker. App was shipped to Apple/Android marketplaces with Cordova</li>
+                                <li>Created application mockups & wireframes using Sketch</li>
+                            </ul>
+                        </div>
+                        <div class="item experience3" style="display: none;">
+                            <p>January 2020 - July 2020</p>
+                            <p>Sens.ai was a social media companion hybrid application. I worked on various parts of the business:</p>
+                            <ul>
+                                <li>Worked on numerous features of React/Redux hybrid app. The app consumed APIs written in Go, and was containerized with Docker. App was shipped to Apple/Android marketplaces with Cordova</li>
+                                <li>Worked on rebuilding the frontend of our internal Ruby on Rails app by integrating React/Redux</li>
+                            </ul>
+                        </div>
+                        <div class="item experience4" style="display: none;">
+                            <p> September 2020 - Present</p>
+                            <p>Sens.ai was a social media companion hybrid application. I worked on various parts of the business:</p>
+                            <ul>
+                                <li>Developed Wordpress websites using my own custom Underscores/SCSS/Gulp/Parcel starter theme</li>
+                                <li>Created application mockups & wireframes using Sketch</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
