@@ -6,7 +6,7 @@
     --primary-color: #0A192F;
     --secondary-color: #2196F3;
     --line-height: 1.7rem;
-    --transition: 0.3s ease-in;
+    --transition: 0.2s ease-in;
 }
 
 
@@ -33,7 +33,7 @@ body {
 }
 
 ul li {
-    list-style-type: none;
+    list-style: none;
 }
   
 a {
@@ -67,11 +67,11 @@ h2 {
 
 h3 {
     font-weight: 500;
-    font-size: 1.953rem;
+    font-size: 1.563rem;
 }
 
 h4 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 600;
     margin: 1.7rem 0 0.7rem;
 }
@@ -85,7 +85,8 @@ p {
 
 /* Button */
 .btn {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     background-color: #2196F3;
     color: white;
     text-decoration: none;
@@ -106,11 +107,13 @@ p {
     background-color: transparent;
     color: white;
     border: 2px solid white ;
+    max-width: 300px;
 }
 
 .b3 {
     background-color: transparent;
     color: #2196F3;
+    max-width: 300px;
 }
 
 .b3:hover {
@@ -146,6 +149,16 @@ nav a {
     display: none;
 }
 
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
 .logo-white {
     width: 80px;
 }
@@ -155,7 +168,7 @@ nav a {
     display: none;
 }
 
-nav ul {
+.nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -195,6 +208,10 @@ nav ul {
     display: block;
 }
 
+#nav-fixed.scrolled .bar {
+    background-color: #0A192F;
+}
+
 
 
 /* Hero Section */
@@ -222,8 +239,7 @@ nav ul {
 
 /* About Section */
 #about {
-    margin-top: 125px;
-    padding: 0 5.5rem;
+    padding: 175px 5.5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,15 +251,14 @@ nav ul {
 }
 
 .about-text {
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 
 
 /* Experience Section */
 #experience {
-    margin-top: 125px;
-    padding: 0 5.5rem;
+    padding: 175px 5.5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -254,52 +269,95 @@ nav ul {
     margin-bottom: 50px;
 }
 
-#experience h4 {
-    padding: 1.5rem 0 1.5rem 1rem;
-    margin: 0;
+.wrapper {
+    display: flex;
+    max-width: 1000px;
 }
 
-#experience .row {
-    display: flex;
-    max-width: 800px;
-}
-
-#experience .left {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
+.wrapper .wrapper_left {
+    width: 250px;
     height: 100%;
-    margin-right: 50px;
-    border-left: 2px solid #2196F3;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    /*border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 10px 0 13px 0 rgba(41, 41, 57, 0.2);*/
+}
+
+.wrapper .wrapper_left ul li h4 {
     position: relative;
+    list-style: none;
+    margin: 0.7rem;
+    font-weight: 500;
 }
 
-#experience .left .bottom1 {
-    border-bottom: 2px solid #2196F3;
-    color: #2196F3;
-    font-weight: 700;
+.wrapper .wrapper_left ul li {
+    margin-bottom: 25px;
+    /*border-radius: 3px;*/
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    transition: all 0.4s ease;
+    cursor: pointer;
 }
 
-/* Experiment */
-/*#experience .left::before {
-    transition: all 0.2s ease 0s;
+.wrapper .wrapper_left ul li:before {
     content: "";
     position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 0.2rem;
+    top: 0;
+    left: 0;
+    width: 5px;
     height: 100%;
-    background: linear-gradient(rgb(239, 65, 45), rgb(79, 41, 32));
-    z-index: 100;
-}*/
-
-#experience ul {
-    padding-left: 2.5rem;
+    background: #2196F3;
+    /*background: linear-gradient(
+        126deg,
+        rgba(2, 0, 36, 1) 0%,
+        #2196DA 0%,
+        #2196F3 100%
+    );
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;*/
+    transition: all 0.4s ease;
 }
 
-#experience ul li {
+.wrapper .wrapper_left ul li:hover {
+    transition: 0.1s ease;
+    color: #2196F3;
+}
+
+.wrapper .wrapper_left ul li.active {
+    width: 100%;
+}
+
+.wrapper .wrapper_left ul li.active h4 {
+    color: white;
+    font-weight: 600;
+}
+
+.wrapper .wrapper_left ul li.active:before {
+    width: 100%;
+    transition: all 0.2s ease;
+}
+  
+.wrapper .wrapper_left ul li:last-child {
+    margin-bottom: 0;
+}
+
+.wrapper .wrapper_right {
+    width: 750px;
+}
+
+.wrapper .wrapper_right .item p {
+    font-weight: 600;
+}
+
+#experience .wrapper_right li {
     list-style-type: disc;
     line-height: 2rem;
+    margin-left: 1rem;
     padding-left: 1.5rem;
 }
 
@@ -307,7 +365,7 @@ nav ul {
 
 /* Work Section */
 #work {
-    margin-top: 125px;
+    padding-top: 175px;
     display: flex;
     flex-direction: column;
 }
@@ -380,6 +438,7 @@ footer {
     justify-content: center;
     align-items: center;
     border-bottom: 8px solid #2196F3;
+    padding: 175px 5.5rem 0;
 }
 
 footer p {
@@ -389,9 +448,9 @@ footer p {
 
 #contact {
     display: flex;
-    padding: 100px 0;
     gap: 150px;
-    max-width: 800px;
+    max-width: 1000px;
+    padding-bottom: 100px;
 }
 
 /*#contact ul {
@@ -412,4 +471,263 @@ footer p {
 #contact a:hover {
     color: #2196F3;
     font-weight: 600;
-} 
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    /* Styles for mobile devices */
+
+
+    /* Resets */
+    body {
+        font-size: 18px;
+    }
+
+
+    /* Headings */
+    h1 {
+        font-size: 2.027rem;
+        margin: 0.8rem 0;
+    }
+    
+    h2 {
+        font-size: 1.802rem;
+    }
+    
+    h3 {
+        font-size: 1.424rem;
+    }
+    
+    h4 {
+        font-size: 1.125rem;
+        margin: 1.7rem 0 0.7rem;
+    }
+    
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.8rem;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 3.7rem;
+        flex-direction: column;
+        background-color: #0A192F;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    #nav-fixed.scrolled .nav-menu {
+        background-color: white;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .logo-white {
+        width: 50px;
+    }
+    
+    .logo-blue {
+        width: 50px;
+        display: none;
+    }
+    
+
+    /* Button */
+    .btn {
+        padding: 20px 30px;
+        width: 100%;
+    }
+
+    .b2 {
+        max-width: 100%;
+    }
+
+    .b3 {
+        max-width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        background-image: url(../img/background-fold-phone@2x.jpg);
+    }
+    
+    .intro-text {
+        margin: 2rem;
+        margin-top: -250px;
+    }
+
+
+    /* About Section*/
+    #about {
+        padding: 100px 2.5rem 0;
+        align-items: flex-start;
+    }
+
+
+    /* Experience Section */
+    #experience {
+        padding: 100px 2.5rem 0;
+        align-items: flex-start;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .wrapper .wrapper_right {
+        width: 100%;
+    }
+
+    .wrapper .wrapper_left ul li {
+        margin-bottom: 10px;
+    }
+
+    .wrapper .wrapper_left ul li h4 {
+        margin: 0.5rem;
+    }
+    
+
+    /* Work Section */
+    #work {
+        padding-top: 100px;
+
+    }
+
+    #work h2{
+        padding: 0 2.5rem;
+        justify-content: flex-start;
+    }
+
+    #work h3 {
+        font-size: 1.802rem;
+        padding-bottom: 0.7rem;
+    }
+
+    .project-inner {
+        padding: 40px 2.5rem;
+    }
+
+    .project1 {
+        background-image: url(../img/project-1-phone@2x.jpg);
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .project2 {
+        background-image: url(../img/project-2-phone@2x.jpg);
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .project3 {
+        background-image: url(../img/project-1-phone@2x.jpg);
+        height: 100vh;
+        width: 100vw;
+    }
+
+    /* Footer Section */
+    footer {
+        padding: 100px 2.5rem 0;
+    }
+    #contact {
+        padding-bottom: 100px;
+        gap: 50px;
+        flex-direction: column;
+    }
+
+    #contact ul li {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    /* Styles for tablets */
+    nav {
+        padding: 1.3rem 3.5rem;
+    }
+
+    .hero {
+        align-items: flex-start;
+        background-image: url(../img/background-fold-tablet@2x.jpg);
+    }
+
+    .intro-text {
+        margin: 200px 3.5rem 0;
+        margin-top: 200px;
+    }
+
+    #about, #experience, footer {
+        padding: 125px 3.5rem 0;
+    }
+
+   #about, #experience {
+        align-items: normal;
+    }
+
+    #work {
+        padding-top: 125px;
+    }
+
+    #work h2 {
+        padding: 0 3.5rem;
+        justify-content: flex-start;
+    }
+
+    .project-inner {
+        padding: 75px 3.5rem;
+    }
+
+    #contact {
+        padding-bottom: 100px;
+        gap: 100px;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Styles for small desktops */
+}
+
+@media screen and (min-width: 1200px) {
+    /* Styles for large desktops */
+}
