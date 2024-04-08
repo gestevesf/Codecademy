@@ -1,0 +1,279 @@
+/* Universal Styles */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #00040d;
+    background-color: #F5F5F5;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #F5F5F5;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+p {
+    max-width: 800px;
+}
+
+/* Button */
+
+button {
+    background-color: #00040d;
+    color: #F5F5F5;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #00BCD4;
+    color: #00040d;
+}
+
+.primary {
+    padding: 5px 10px;
+    border-radius: 16px;
+}
+
+.secondary {
+    padding: 10px 20px;
+    font-size: large;
+    border-radius: 10px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    background-color: white;
+}
+
+header section .container .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+}
+
+header .logo {
+    width: 200px;
+}
+  
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+  
+nav li {
+    padding-left: 3.5rem;
+}
+
+nav a {
+    vertical-align: bottom;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #00040d;
+    font-weight: 600;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+
+header .mobile {
+    display: none;
+}
+
+/* Sections */
+
+/* Cover */
+
+#cover {
+    margin-bottom: 100px;
+}
+
+.cover {
+    height: 600px;
+    background-image: url('../images/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 1px;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
+.title {
+   /* background-color: rgb(0,0,0); /* Fallback color */
+   /* background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+   /* border: 3px solid #f1f1f1; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+}
+
+#join-us,
+#reviews,
+#members{
+    margin: 0 30px 100px;
+}
+
+/* Join Us Section */
+
+#join-us img {
+    width: 31%;
+    height: 300px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+#join-us .mobile {
+    display: none;
+}
+
+.text {
+    margin-bottom: 40px;
+}
+
+.text ul {
+    list-style-type: none;
+}
+
+.text ul li {
+    padding-bottom: .5%;
+}
+
+/* Members Section */
+
+#members img {
+    width: 31%;
+    height: 300px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+#members .mobile {
+    display: none;
+}
+
+/* Reviews Section */
+
+#reviews {
+    background-color: #00BCD4;
+    color: #00040d;
+}
+
+#reviews .row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#reviews h3, p {
+    width: 80%;
+}
+
+/* Footer */
+
+footer {
+    padding: 20px 0;
+    background-color: #00BCD4;
+    color: #00040d;
+    text-align: center;
+}
+
+footer p {
+    max-width: none;
+    font-size: smaller;
+}
+
+@media screen and (max-width: 850px) {
+    
+    header .desktop {
+        display: none;
+    }
+
+    header .mobile {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+    }
+
+    header nav ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+      
+    header .mobile a {
+        color: #00040d;
+        padding: 5px 16px;
+        font-size: 18px;
+        display: block;
+    }
+
+    header section .container .row {
+        padding: 0;
+    }
+
+    #join-us img {
+        width: 47%;
+        height: 400px;
+        margin-right: 10px;
+        object-fit: cover;
+    }
+    
+    #join-us .mobile {
+        display: block;
+    }
+
+    #join-us .desktop {
+        display: none;
+    }
+
+    #members img {
+        width: 47%;
+        height: 400px;
+        margin-right: 10px;
+        object-fit: cover;
+    }
+    
+    #members .mobile {
+        display: block;
+    }
+
+    #members .desktop {
+        display: none;
+    }
+}
